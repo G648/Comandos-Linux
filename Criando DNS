@@ -1,0 +1,34 @@
+CRIAÇÃO DE DNS - DOMAIN NAME SYSTEM:
+  # Instalar o servidor DNS bind9
+-apt-get install bind9
+
+  # Copiar o db.local para servir de modelo
+-cp /etc/bind/db.local /etc/bind/db.redes.br
+
+  Após a instalação são criados arquivos onde há as configurações básicas do
+serviço de DNS, estes arquivos são encontrados dentro do diretório:
+  # cd /etc/bind/
+named.conf – Configurações básicas do serviço de DNS.
+named.conf.local - Arquivo de zona de entrada direta e inversa.
+named.conf.options – Arquivo de configurações globais.
+named.conf.default-zones – Arquivos de Zonas de DNS
+db.root – Arquivo de configuração dos servidores de DNS raiz.
+db.local (db.redes.br) – Arquivo de configuração do DNS (A, CNAME, MX...).
+
+  #ENTRAR NO ARQUIVO:
+   -vim /etc/bind/db.redes.br
+  
+  #SUBSTITUIR O ARQUIVO "LOCALHOST" PARA O NOME DO SEU SITE
+    -:%s/localhost/redes.br/g
+    
+  #ENTRAR NO ARQUIVO:
+    -cd /etc/bind/named.conf.default-zones
+    
+    #Agora basta modificar para ter o nome do seu domínio e o
+arquivo que configurou (redes.br)
+
+    #APÓS CONFIGURAR A ZONA, DEVE REINICIAR O SERVIÇO:
+      -service bind9 restart (Se estiver tudo certo, nao terá nenhum problema para reiciniar o serviço)
+      
+  FIM
+      
