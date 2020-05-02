@@ -24,3 +24,18 @@ primeiros comandos:
   -ifconfig (MOSTRA OS IPs)
   
   -shutdown now (DESLIGA A MÁQUINA)
+  
+   EXEMPLOS :
+   - Criar uma pasta no /tmp chamada tarde
+    R: mkdir /tmp/tarde
+   
+   - Exibir o conteúdo deste arquivo
+    R: cat /tmp/tarde/novo
+    
+   - Mover a pasta tarde para o /root
+    R: mv /tmp/tarde /root
+    
+   - Listar as últimas 7 linhas do arquivo
+/var/log/messages
+    R: tail –7 /var/log/messages
+    
