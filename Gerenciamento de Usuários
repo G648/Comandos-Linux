@@ -1,0 +1,19 @@
+Criação de usuarios:
+  -apt-get install tree (mostra todos os usuarios dentro da pasta)
+ EX: tree /home/usuarios 
+ 
+  -adduser ou useradd (ADICIONA UM NOVO USUÁRIO)
+ EX: adduser Guilherme /home/(grupo que voce criou) 
+ 
+  -addgrp ou addgroup (ADICIONA UM NOVO GRUPO)
+ EX: addgroup + nome do grupo que quer 
+ 
+  -deluser (DELETA O USUÁRIO CRIADO)
+  
+  -chown (TROCA O DONO DA PASTA)
+  
+  -chmod (TROCA AS PERMISSÕES DO USUARIO, PERMISSÃO MÁXIMA DE 777)
+  
+  -chgrp (troca o grupo dono da pasta)
+  
+  -passwd + nome de usuario (MUDA A SENHA) 
