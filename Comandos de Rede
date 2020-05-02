@@ -1,0 +1,19 @@
+CONFIGURANDO INTERFACE DE REDE:
+  -apt-get install net-tools
+  
+  -apt-get install vim 
+ 
+  -vim /etc/network/interfaces (vai entrar onde estão os IPs)
+ Ao entrar na interface, voce vai configurar colocando o IP apropriado
+ 
+  -após configurar a interface deve reinicia-lá usuando o comando:
+    -systemctl restart networking 
+  
+  Se mesmo assim o IP configurado nao funcionar, dar esses comandos:
+     -ifdown + nome da interface de rede, EX: ens33
+     -ifup  ens33
+     
+  Qualquer coisa dar o comando:
+     -ip add flush ens33
+     -systemctl restart networking
+  
