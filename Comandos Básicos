@@ -1,0 +1,26 @@
+Linux é operado através da CLI (linha de comando)
+
+primeiros comandos:
+  -apt-get update (ATUALIZA)
+  
+  -apt-get install... (INSTALA PACOTES)
+  
+  -hostnamectl set hostname + nome que quer dar (COLOCA NOME NA MÁQUINA)
+  
+  -ls -l (MOSTRA AS PASTAS NO DIRETÓRIO EM QUE ESTÁ)
+  
+  -ctrl + l (LIMPA A TELA)
+  
+  -cd + pasta que quer ir (TE LEVA A UMA DETERMINADA PASTA)
+  
+  - ../ (VOLTA PARA PASTA QUE ESTAVA)
+  
+  - ../../ (VOLTA DUAS PASTAS)
+  
+  -mkdir + nome do diretórorio que quer criar (CRIA DIRETÓRIOS)
+  
+  -rm -r + nome do diretório (REMOVE UM ARQUIVO OU DIRETÓRIO)
+  
+  -ifconfig (MOSTRA OS IPs)
+  
+  -shutdown now (DESLIGA A MÁQUINA)
