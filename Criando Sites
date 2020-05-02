@@ -1,0 +1,32 @@
+Criação de Sites no Linux:
+
+  #Instalar o Apache2
+	apt-get install apache2
+	apt install apache2
+
+#Copiar o arquivo de configuraaçãoo padrão
+	cd /etc/apache2/sites-available/
+	cp 000-default.conf <NOME DO MEU SITE>.conf
+
+#Editar o arquivo <NOME DO MEU SITE>.conf
+	vim <NOME DO MEU SITE>.conf
+
+#Editar os seguintes parâmetros
+	ServerName <NOME DO MEU SITE> - Nome do Site
+	ServerAdmin webmaster@<NOME DO MEU SITE> - E-mail do responsavel pelo site
+	DocumentRoot /var/www/<NOME DO MEU SITE>/html/ - Caminho para os arquivos do seu site
+
+#Habilitar o site
+	a2ensite <NOME DO MEU SITE>
+
+#Dar o reload no servidor do Apache2
+	systemctl reload apache2
+
+#Criar a pasta do seu site
+	mkdir -p /var/www/<NOME DO MEU SITE>/html/
+
+#Criar o index.html
+	vim /var/www/<NOME DO MEU SITE>/html/index.html
+    -Colocar o que deseja que apareça na tela 
+    
+ FIM
