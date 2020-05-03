@@ -1,0 +1,27 @@
+Syslog no Linux:
+
+  -CONFIGURAÇÃO SERVIDOR
+  vi /etc/syslog-ng/syslog-ng.conf
+    
+    source s_linfire { udp();
+    destination d_linfire { file (“/var/log/linfire.log”); }
+    filter f_linfire { netmask(10.0.0.14); }; #ip do cliente syslog-ng
+    log { source(s_linfire);filter(f_linfire);destination(d_linfire); };
+    
+  touch /var/log/linfire.log
+    #reinicie o serviço
+    service syslog-ng restart
+    
+    -CONFIGURAÇÃO CLIENTE 
+    vi /etc/syslog-ng/syslog-ng.conf
+    
+      destination d_srvlin { udp(“10.0.0.10” port(514)); };
+      filter f_d_srvlin { level(info, warn, err, crit) and facility(auth, authpriv, daemon, mail, news,
+      cron, user); }; ### em caso que se queira guardar copias dos logs enviadoas####
+      log { source(s_src); destination(d_srvlin); };
+     
+    #reinicie o serviço
+    service syslog-ng restart
+    
+    OBS: se for mais de um servidor que esteja capturando log, usar o mesmo “source” caso contrário
+    ele ira logar apenas o ultimo servidor listado.
