@@ -12,7 +12,10 @@ Criação de usuarios:
   
   -chown (TROCA O DONO DA PASTA)
   
-  -chmod (TROCA AS PERMISSÕES DO USUARIO, PERMISSÃO MÁXIMA DE 777)
+  -chmod 6 /home/usuario/ (TROCA AS PERMISSÕES DO USUARIO, PERMISSÃO MÁXIMA DE 777)
+    permissao para ler: 4
+    permissao para escrever: 2
+    permissao para executar: 1
   
   -chgrp (troca o grupo dono da pasta)
   
